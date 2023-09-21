@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <form id="convTemp" onsubmit="convTemp(); return false">
+            <label for="Temp">Enter the Temperature to Convert</label>
+            <br>
+            <input type="number" name="Temp" id="Temp" value="0">
+            <select name="Temp_change" id="Temp_change">
+                <option value="Cel">&#176; Celsius</option>
+                <option value="Fah">&#176; Fahrenheit</option>
+            </select>
+            <br>
+            <input type="Submit" name="Temp" id="Submit">
+            <br>
+            <span id="Result"></span>
+        </form>
+    </div>
+    <footer>
+        <h3>All Rights Reserved &copy; DesignedbyAA</h3>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
