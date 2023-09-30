@@ -1,85 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Baloo Bhai';
+body {
+    background: url('../images/calculator.jpg') no-repeat center center/cover;
 }
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(/stock-photo-hot-temperature-thermometer-on-yellow-sky-with-sun-shining-in-summer-show-higher-weather-concept-2180966313.jpg) no-repeat center center/cover;
-    background-color: #cccccc;
-    height: 100vh;
+.calculator {
+    width: 331px;
+    margin: 0px auto;
     text-align: center;
+    border: 50px solid black;
+    border-radius: 10px;
+    background-color: orange;
+    height: 366px;
 }
-
-#convTemp {
-    padding: 25px 65px;
-    min-height: 290px;
-    background-color: yellow;
+#result {
+    background-color: bisque;
+    width: 73%;
+    padding: 22px;
+    margin-bottom: 12px;
+    margin-top: 20px;
 }
-
-#convTemp:hover {
-    background-color: aqua;
-    transition: all 0.5s ease;
+.buttons {
+    display: grid;
+    background-color: green;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
 }
-
-label {
-    font-size: 25px;
-    line-height: 65px;
-}
-
-#Temp {
-    width: 100px;
-    height: 35px;
-    margin: 10px;
-    padding: 8px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: lightblue;
-    font-size: 20px;
-    font-weight: 50;
-}
-
-#Temp_change {
-    width: 110px;
-    height: 30px;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: lightblue;
-    font-size: 10px;
-    font-weight: 50;
-}
-
-#Submit {
-    width: 100px;
-    margin: 30px 0px 20px 0px;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: red;
-    transition: all 0.5s ease;
-}
-
-#Submit:hover {
+button {
+    padding: 13px;
     background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+}
+button:hover {
+    background-color: red;
     color: white;
     cursor: pointer;
-}
-
-#Result {
-    font-size: 25px;
-}
-
-footer h3 {
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    padding: 15px;
 }

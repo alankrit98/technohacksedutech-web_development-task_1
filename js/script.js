@@ -1,21 +1,27 @@
-const convTemp = () => {
-    const inputTemp = document.getElementById('Temp').value;
-    const Tempchange = document.getElementById('Temp_change');
-    const outputTemp = Temp_change.options[Tempchange.selectedIndex].value;
-
-    const CeltoFah = (Cel) => {
-        let Fahrenheit = ((Cel * 9 / 5) + 32).toFixed(1);
-        return Fahrenheit;
-    }
-
-    const FahtoCel = (Fah) => {
-        let Celsius = ((Fah - 32) * 5 / 9).toFixed(1);
-        return Celsius;
-    }
-
-    if(outputTemp == 'Cel') {
-        document.getElementById('Result').innerHTML = CeltoFah(inputTemp) + "&#176; Fahrenheit";
-    } else {
-        document.getElementById('Result').innerHTML = FahtoCel(inputTemp) + "&#176; Celsius";
-    }
-}
+let expression = '';
+        function ClearResult() {
+            expression = '';
+            document.getElementById('result').value = '';
+        }
+        function BackSpace() {
+            var len = document.getElementById('result');
+            len.value = len.value.slice(0, -1);
+            len.value = '';
+        }
+        function appendNumber(number) {
+            expression += number;
+            document.getElementById('result').value = expression;
+        }
+        function appendOperator(operator) {
+            expression += operator;
+            document.getElementById('result').value = expression;
+        }
+        function Calculate() {
+            try {
+                const result = eval(expression);
+                document.getElementById('result').value = result;
+                expression = result;
+            } catch(error) {
+                document.getElementById('result').value = 'Error';
+            }
+        }
